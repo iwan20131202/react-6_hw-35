@@ -26,3 +26,18 @@ export const SearchInput = styled.input`
     box-shadow: 0 4px 8px rgba(1, 97, 176, 0.2);
   }
 `;
+
+export const SortSelect = styled.select`
+  padding: 10px;
+  border: solid 1px #505160;
+  border-radius: 4px;
+  background-color: white;
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+
+  &:focus {
+    box-shadow: 0 4px 8px rgba(1, 97, 176, 0.2);
+  }
+`;

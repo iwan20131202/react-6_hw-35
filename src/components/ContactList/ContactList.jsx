@@ -3,36 +3,31 @@ import { useSelector } from "react-redux";
 import { Contact } from "../Contact/Contact";
 
 import {
-  getContacts,
-  getFilter,
+  getVisibleContacts,
   getIsLoading,
   getError,
 } from "../../redux/selectors";
 
-import { ListTitle, ContactsList } from "./ContactList.styled";
+import { Title, List } from "./ContactList.styled";
 
 export const ContactList = () => {
-  const contacts = useSelector(getContacts);
-  const filter = useSelector(getFilter);
+  const contacts = useSelector(getVisibleContacts);
   const isLoading = useSelector(getIsLoading);
   const error = useSelector(getError);
 
-  const visibleContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(filter.toLowerCase()),
-  );
-
   return (
     <>
-      <ListTitle>Contacts</ListTitle>
+      <Title>Contacts</Title>
 
       {isLoading && <p>Loading...</p>}
+
       {error && <p>Error: {error}</p>}
 
-      <ContactsList>
-        {visibleContacts.map((contact) => (
+      <List>
+        {contacts.map((contact) => (
           <Contact key={contact.id} contact={contact} />
         ))}
-      </ContactsList>
+      </List>
     </>
   );
 };

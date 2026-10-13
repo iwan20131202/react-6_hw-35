@@ -7,6 +7,7 @@ const initialState = {
   isLoading: false,
   error: null,
   filter: "",
+  sortOrder: "asc",
 };
 
 const contactsSlice = createSlice({
@@ -16,6 +17,9 @@ const contactsSlice = createSlice({
   reducers: {
     setFilter(state, action) {
       state.filter = action.payload;
+    },
+    setSortOrder(state, action) {
+      state.sortOrder = action.payload;
     },
   },
 
@@ -63,6 +67,6 @@ const contactsSlice = createSlice({
   },
 });
 
-export const { setFilter } = contactsSlice.actions;
+export const { setFilter, setSortOrder } = contactsSlice.actions;
 
 export const contactsReducer = contactsSlice.reducer;

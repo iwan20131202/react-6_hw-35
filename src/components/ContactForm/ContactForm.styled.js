@@ -20,15 +20,20 @@ export const FormLabel = styled.label`
 
 export const FormInput = styled.input`
   padding: 8px;
-  border: none;
   border-radius: 4px;
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
   outline: none;
+  border: 1px solid ${({ $invalid }) => ($invalid ? "#d64545" : "transparent")};
 
   &:focus {
     box-shadow: 0 4px 8px rgba(133, 199, 254, 0.2);
   }
+`;
+
+export const ErrorText = styled.span`
+  color: #d64545;
+  font-size: 14px;
 `;
 
 export const SubmitButton = styled.button`
