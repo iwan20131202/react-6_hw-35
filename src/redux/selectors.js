@@ -1,6 +1,13 @@
-import { createSelector } from "reselect";
+import { createSelector } from "@reduxjs/toolkit";
 
-export const getContacts = (state) => state.contacts.items;
+import { contactsAdapter } from "./contactsSlice";
+
+// Готові селектори від адаптера для нормалізованого стану
+export const {
+  selectAll: getContacts, // масив усіх контактів (мемоїзований)
+  selectById: getContactById, // (state, id) => контакт
+  selectTotal: getContactsCount, // кількість контактів
+} = contactsAdapter.getSelectors((state) => state.contacts);
 
 export const getFilter = (state) => state.contacts.filter;
 
