@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a363b;
+  padding: 16px 0;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+}
+.link {
+  text-decoration: none;
+  color: #2a363b;
+  font-weight: 700;
+}
+.activeLink {
+  text-decoration: none;
+  color: #e84a5f;
+  font-weight: 700;
+}
