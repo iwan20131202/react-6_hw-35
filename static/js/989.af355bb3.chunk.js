@@ -1,0 +1,2 @@
+"use strict";(globalThis.webpackChunkreact_6_hw_35||=[]).push([[989],{989(e,t,r){r.r(t);r(43);var o=r(579);const s=()=>(0,o.jsxs)("div",{style:{textAlign:"center",marginTop:"40px"},children:[(0,o.jsx)("h1",{children:"Welcome to your Contactbook! \u260e\ufe0f"}),(0,o.jsx)("p",{children:"Please register or log in to manage your private contacts securely."})]});r.d(t,["default",0,s])}}]);
+//# sourceMappingURL=989.af355bb3.chunk.js.map
